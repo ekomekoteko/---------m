@@ -596,53 +596,6 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 
 
 
-client.on('message', message => {
-
-    if (message.author.bot) return;
-
-     if (message.content === (prefix + "help")) {
-
-  let embed = new Discord.RichEmbed()
-
-          .setAuthor(message.author.username, message.author.avatarURL)
-
-           .setThumbnail(message.author.avatarURL)
-
-                 .setTimestamp()
-
-    .setDescription(`
-	 ** اوامر الموسيقى 🎶 **
-**__${prefix}play__** : لتشغيل الاغاني
-**__${prefix}skip__** : لتخطي الاغنية
-**__${prefix}volume__** : لتحديد مستوى الصوت
-**__${prefix}pause__** : للأيقاف المؤقت
-**__${prefix}resume__** : للأستئناف
-**__${prefix}join__** : لكي ينضم البوت للروم الصوتي
-**__${prefix}leave__** : لكي يخرج البوت من الروم الصوتي
-`)
-
-.setColor('RANDOM')
-
-message.author.sendEmbed(embed)
-
-}
-
-});////////////////////////By:Mahmoud-Quatyle
-////////////////////////By:Mahmoud-Quatyle
-
-
-client.on('message', msg => {
-
-      if(!msg.channel.guild) return;
-
-    if(msg.content.startsWith (prefix + 'help')) {
-
-    msg.reply('`تم أرسال المساعدة في الخاص`');
-
-  }
-
-});
-
 
 
 client.login(process.env.BOT_TOKEN);
